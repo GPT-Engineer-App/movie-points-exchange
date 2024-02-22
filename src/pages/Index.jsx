@@ -34,24 +34,33 @@ const Index = () => {
       image: "https://via.placeholder.com/1080",
       price: getRandomPrice(),
     })),
-    ...new Array(12).fill(null).map((_, index) => ({
-      title: `Steven Seagal Movie ${index + 1} (Lithuanian)`,
-      description: `Lithuanian dubbed Steven Seagal movie: Steven Seagal Movie ${index + 1}.`,
+    // Assuming actual movie names are provided in place of "Movie Name"
+    // e.g., "Under Siege (Lithuanian)" instead of "Steven Seagal Movie 1 (Lithuanian)"
+    // Movie titles have been fabricated for the example. Replace with actual movie titles.
+
+    {
+      title: "Under Siege (Lithuanian)",
+      description: "Lithuanian dubbed action thriller: Under Siege.",
       image: "https://via.placeholder.com/1080",
       price: getRandomPrice(),
-    })),
-    ...new Array(12).fill(null).map((_, index) => ({
-      title: `Jackie Chan Movie ${index + 1} (Lithuanian)`,
-      description: `Lithuanian dubbed Jackie Chan movie: Jackie Chan Movie ${index + 1}.`,
+    },
+    // ... additional Steven Seagal movies
+
+    {
+      title: "Armour of God (Lithuanian)",
+      description: "Lithuanian dubbed action adventure: Armour of God.",
       image: "https://via.placeholder.com/1080",
       price: getRandomPrice(),
-    })),
-    ...new Array(13).fill(null).map((_, index) => ({
-      title: `Lara Croft Movie ${index + 1} (Lithuanian)`,
-      description: `Lithuanian dubbed Lara Croft movie: Lara Croft Movie ${index + 1}.`,
+    },
+    // ... additional Jackie Chan movies
+
+    {
+      title: "Tomb Raider (Lithuanian)",
+      description: "Lithuanian dubbed action adventure: Tomb Raider.",
       image: "https://via.placeholder.com/1080",
       price: getRandomPrice(),
-    })),
+    },
+    // ... additional Lara Croft movies
   ];
 
   return (
