@@ -34,9 +34,21 @@ const Index = () => {
       image: "https://via.placeholder.com/1080",
       price: getRandomPrice(),
     })),
-    ...new Array(37).fill(null).map((_, index) => ({
-      title: `Lithuanian Movie ${index + 1}`,
-      description: "Description of a Lithuanian Movie",
+    ...new Array(12).fill(null).map((_, index) => ({
+      title: `Steven Seagal Movie ${index + 1} (Lithuanian)`,
+      description: `Lithuanian dubbed Steven Seagal movie: Steven Seagal Movie ${index + 1}.`,
+      image: "https://via.placeholder.com/1080",
+      price: getRandomPrice(),
+    })),
+    ...new Array(12).fill(null).map((_, index) => ({
+      title: `Jackie Chan Movie ${index + 1} (Lithuanian)`,
+      description: `Lithuanian dubbed Jackie Chan movie: Jackie Chan Movie ${index + 1}.`,
+      image: "https://via.placeholder.com/1080",
+      price: getRandomPrice(),
+    })),
+    ...new Array(13).fill(null).map((_, index) => ({
+      title: `Lara Croft Movie ${index + 1} (Lithuanian)`,
+      description: `Lithuanian dubbed Lara Croft movie: Lara Croft Movie ${index + 1}.`,
       image: "https://via.placeholder.com/1080",
       price: getRandomPrice(),
     })),
