@@ -38,10 +38,22 @@ const Index = () => {
       <Heading mb={6}>Lithuanian Movie Streaming</Heading>
 
       <VStack spacing={4} align="stretch" mb={8}>
-        <Button leftIcon={<FaCreditCard />} colorScheme="blue">
+        <Button
+          leftIcon={<FaCreditCard />}
+          colorScheme="blue"
+          onClick={() => {
+            alert("Bank transfer information: LT727044090101171110");
+          }}
+        >
           Add Points with Bank Card
         </Button>
-        <Button leftIcon={<FaPaypal />} colorScheme="blue">
+        <Button
+          leftIcon={<FaPaypal />}
+          colorScheme="blue"
+          onClick={() => {
+            alert("PayPal transfer information: sender.lithuania@gmail.com");
+          }}
+        >
           Add Points with PayPal
         </Button>
         <Button leftIcon={<FaUpload />} colorScheme="green">
