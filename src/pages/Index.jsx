@@ -9,8 +9,14 @@ const generateRandomDomain = () => {
   return randomWord + randomTld;
 };
 
+import { useState, useEffect } from "react";
+
 const Index = () => {
-  const randomDomain = generateRandomDomain();
+  const [randomDomain, setRandomDomain] = useState("");
+
+  useEffect(() => {
+    setRandomDomain(generateRandomDomain());
+  }, []);
   // Mock movie data with prices
   const getRandomPrice = () => Math.floor(Math.random() * 10) + 1;
   const jackieChanMovies = ["Rush Hour", "Police Story", "Drunken Master", "Project A", "Who Am I?", "Shanghai Noon", "The Tuxedo", "Dragon Blade"];
