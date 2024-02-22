@@ -105,7 +105,7 @@ const Index = () => {
                 <Text fontSize="sm">{movie.description}</Text>
                 <Text fontSize="sm" color="gray.500">{`Price: ${movie.price} Points`}</Text>
               </VStack>
-              <Button rightIcon={<FaPlayCircle />} colorScheme="teal" mt={2}>
+              <Button rightIcon={<FaPlayCircle />} colorScheme="teal" mt={2} onClick={() => alert(`Enjoy watching ${movie.title}!`)}>
                 Watch Now
               </Button>
             </Flex>
