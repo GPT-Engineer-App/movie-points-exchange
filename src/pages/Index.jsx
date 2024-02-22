@@ -91,6 +91,9 @@ const Index = () => {
           </Box>
         ))}
       </Grid>
+      <Box as="footer" py={10} textAlign="center">
+        Website created by Tomas Juodiška
+      </Box>
     </Container>
   );
 };
