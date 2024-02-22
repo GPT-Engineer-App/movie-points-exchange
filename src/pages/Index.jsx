@@ -4,12 +4,34 @@ import { FaCreditCard, FaPaypal, FaPlayCircle, FaUpload } from "react-icons/fa";
 const Index = () => {
   // Mock movie data with prices
   const getRandomPrice = () => Math.floor(Math.random() * 10) + 1;
-  const movies = new Array(50).fill(null).map((_, index) => ({
-    title: `Lithuanian Movie ${index + 1}`,
-    description: "Description of a Lithuanian Movie",
-    image: "https://images.unsplash.com/photo-1484627147104-f5197bcd6651?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxMaXRodWFuaWFuJTIwbGFuZHNjYXBlfGVufDB8fHx8MTcwODYxODI0Mnww&ixlib=rb-4.0.3&q=80&w=1080",
-    price: getRandomPrice(),
-  }));
+  const jackieChanMovies = ["Rush Hour", "Police Story", "Drunken Master", "Project A", "Who Am I?", "Shanghai Noon", "The Tuxedo", "Dragon Blade"];
+
+  const movies = [
+    {
+      title: "Death App's",
+      description: "Lithuanian dubbed thriller movie.",
+      image: "https://via.placeholder.com/1080",
+      price: getRandomPrice(),
+    },
+    {
+      title: "Karate Kid",
+      description: "Lithuanian version of the classic martial arts film.",
+      image: "https://via.placeholder.com/1080",
+      price: getRandomPrice(),
+    },
+    ...jackieChanMovies.map((title) => ({
+      title: `${title} (Lithuanian)`,
+      description: `Lithuanian dubbed Jackie Chan movie: ${title}.`,
+      image: "https://via.placeholder.com/1080",
+      price: getRandomPrice(),
+    })),
+    ...new Array(37).fill(null).map((_, index) => ({
+      title: `Lithuanian Movie ${index + 1}`,
+      description: "Description of a Lithuanian Movie",
+      image: "https://via.placeholder.com/1080",
+      price: getRandomPrice(),
+    })),
+  ];
 
   return (
     <Container maxW="container.xl" p={4}>
