@@ -1,7 +1,16 @@
-import { Box, Button, Container, Flex, Grid, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Grid, Heading, Image, Text, VStack, Divider } from "@chakra-ui/react";
 import { FaCreditCard, FaPaypal, FaPlayCircle, FaUpload } from "react-icons/fa";
 
+const generateRandomDomain = () => {
+  const words = ["streaming", "movies", "film", "cinema", "flick", "screen", "showtime"];
+  const tlds = [".com", ".net", ".org", ".lt"];
+  const randomWord = words[Math.floor(Math.random() * words.length)];
+  const randomTld = tlds[Math.floor(Math.random() * tlds.length)];
+  return randomWord + randomTld;
+};
+
 const Index = () => {
+  const randomDomain = generateRandomDomain();
   // Mock movie data with prices
   const getRandomPrice = () => Math.floor(Math.random() * 10) + 1;
   const jackieChanMovies = ["Rush Hour", "Police Story", "Drunken Master", "Project A", "Who Am I?", "Shanghai Noon", "The Tuxedo", "Dragon Blade"];
@@ -37,7 +46,11 @@ const Index = () => {
     <Container maxW="container.xl" p={4}>
       <Heading mb={6}>Lithuanian Movie Streaming</Heading>
 
-      <VStack spacing={4} align="stretch" mb={8}>
+      <VStack spacing={4} align="stretch" mb={4}>
+        <Text fontSize="lg" color="gray.500">
+          Random Domain: {randomDomain}
+        </Text>
+        <Divider mb={4} />
         <Button
           leftIcon={<FaCreditCard />}
           colorScheme="blue"
